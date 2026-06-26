@@ -6,8 +6,8 @@
     {% csrf_token %}
 
     <input type="submit" value="Yes" class="btn btn-danger">
-    <a href="{% url 'taxi:manufacturer-list' %}" class="btn btn-secondary">
+    <button type="button" onclick="history.back()" class="btn btn-secondary">
       No
-    </a>
+    </button>
   </form>
 {% endblock %}

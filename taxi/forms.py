@@ -3,6 +3,8 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
+from taxi.models import Car
+
 
 class DriverCreationForm(UserCreationForm):
 
@@ -29,7 +31,7 @@ class CarForm(forms.ModelForm):
     )
 
     class Meta:
-        model = get_user_model()
+        model = Car
         fields = "__all__"
 
 

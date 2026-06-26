@@ -105,7 +105,7 @@ class DriverDeleteView(LoginRequiredMixin, generic.DeleteView):
     success_url = reverse_lazy("taxi:driver-list")
 
 
-class CarDriverDeleteView(LoginRequiredMixin, View):
+class CarDriverToggle(LoginRequiredMixin, View):
     def get(self, request, pk):
         car = Car.objects.get(pk=pk)
         current_driver = request.user
